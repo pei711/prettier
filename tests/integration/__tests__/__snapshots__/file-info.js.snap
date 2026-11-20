@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
+exports[`does not infer a parser for an extensionless README  1`] = `
+{
+  "stderr": "",
+  "stdout": "{ "ignored": false, "inferredParser": null }",
+  "write": [],
+}
+`;
+
 exports[`extracts file-info for a file in not_node_modules  1`] = `
 {
   "stderr": "",
@@ -12,14 +20,6 @@ exports[`extracts file-info for a js file  1`] = `
 {
   "stderr": "",
   "stdout": "{ "ignored": false, "inferredParser": "babel" }",
-  "write": [],
-}
-`;
-
-exports[`extracts file-info for a known markdown file with no extension  1`] = `
-{
-  "stderr": "",
-  "stdout": "{ "ignored": false, "inferredParser": "markdown" }",
   "write": [],
 }
 `;

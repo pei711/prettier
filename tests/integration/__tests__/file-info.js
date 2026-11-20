@@ -19,7 +19,7 @@ describe("extracts file-info for a markdown file", () => {
   });
 });
 
-describe("extracts file-info for a known markdown file with no extension", () => {
+describe("does not infer a parser for an extensionless README", () => {
   runCli("cli/", ["--file-info", "README"]).test({
     status: 0,
   });
@@ -126,7 +126,7 @@ test("API getFileInfo with no args", async () => {
 test("API getFileInfo with filepath only", async () => {
   await expect(prettier.getFileInfo("README")).resolves.toStrictEqual({
     ignored: false,
-    inferredParser: "markdown",
+    inferredParser: null,
   });
   await expect(
     prettier.getFileInfo("tsconfig.json", { resolveConfig: false }),
