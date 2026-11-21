@@ -166,6 +166,14 @@ This option adds support to editor integrations where users define their default
 
 Don’t take `.editorconfig` into account when parsing configuration. See the [`prettier.resolveConfig` docs](api.md) for details.
 
+## `--plugin`
+
+Load a plugin. You can specify this option multiple times to load multiple plugins. For more information, see the [Plugins documentation](plugins.md).
+
+```bash
+prettier --plugin=prettier-plugin-foo main.foo
+```
+
 ## `--with-node-modules`
 
 Prettier CLI will ignore files located in `node_modules` directory. To opt out from this behavior, use `--with-node-modules` flag.
